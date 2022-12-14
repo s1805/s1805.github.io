@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<title>深層学習で数字判定</title>
+<h1>数字の画像をアップロード</h1>
+<p>画像はモノクロで28x28ピクセルにしてください。</p>
+<p>現在のところ"4"と"9"の分類のみに対応しています。</p>
+<form action="{{url_for('upload')}}" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <input type="submit" value="アップロード">
+</form>
+
+<p><img {{pred}}></p>
+{% endblock %}
