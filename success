@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<title>推論結果</title>
+<h1>推論が完了しました</h1>
+<p>アップロードされたファイルは {{save_filename}} です。</p>
+<p><img {{pred}}></p>
+
+{% endblock %}
